@@ -1,0 +1,26 @@
+@import "./variables";
+
+@mixin page-init {
+  // smt
+}
+
+@mixin flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex-horizontal-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flex-abs-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+//@mixin

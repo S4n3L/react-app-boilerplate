@@ -1,0 +1,25 @@
+{
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "block-closing-brace-newline-after": "always",
+    "color-no-invalid-hex": true,
+    "indentation": 2,
+    "property-no-unknown": true,
+    "max-empty-lines": 1,
+    "value-keyword-case": "lower",
+    "at-rule-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}
+

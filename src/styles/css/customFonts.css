@@ -1,0 +1,90 @@
+/*
+  This is where we can add custom fonts with the @font-face directive. See example bellow
+*/
+
+/*
+@font-face {
+  font-family: "brignell-square-regular";
+  src:
+    url(../static/fonts/BrignellSquareEOT/BrignellSquare-Regular.eot) format('eot'),
+    url(../static/fonts/BrignellSquareTTF/BrignellSquare-Regular.ttf) format('truetype'),
+    url(../static/fonts/BrignellSquareWOFF/BrignellSquare-Regular.woff) format('woff'),
+    url(../static/fonts/BrignellSquareWOFF2/BrignellSquare-Regular.woff2) format('woff2');
+  font-style: "regular";
+}
+
+@font-face {
+  font-family: "brignell-square-medium";
+  src:
+    url(../static/fonts/BrignellSquareEOT/BrignellSquare-Medium.eot) format('eot'),
+    url(../static/fonts/BrignellSquareTTF/BrignellSquare-Medium.ttf) format('truetype'),
+    url(../static/fonts/BrignellSquareWOFF/BrignellSquare-Medium.woff) format('woff'),
+    url(../static/fonts/BrignellSquareWOFF2/BrignellSquare-Medium.woff2) format('woff2');
+  font-style: "medium";
+}
+
+@font-face {
+  font-family: "brignell-square-bold";
+  src:
+    url(../static/fonts/BrignellSquareEOT/BrignellSquare-Bold.eot) format('eot'),
+    url(../static/fonts/BrignellSquareTTF/BrignellSquare-Bold.ttf) format('truetype'),
+    url(../static/fonts/BrignellSquareWOFF/BrignellSquare-Bold.woff) format('woff'),
+    url(../static/fonts/BrignellSquareWOFF2/BrignellSquare-Bold.woff2) format('woff2');
+  font-style: "bold";
+}
+*/
+
+@font-face {
+  font-family: "Tomica Thin";
+  src:
+    url("../static/fonts/tomica-thin.woff2") format("woff2"),
+    url("../static/fonts/tomica-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tomica Light";
+  src:
+    url("../static/fonts/tomica-light.woff2") format("woff2"),
+    url("../static/fonts/tomica-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tomica";
+  src:
+    url("../static/fonts/tomica-regular.woff2") format("woff2"),
+    url("../static/fonts/tomica-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tomica Bold";
+  src:
+    url("../static/fonts/tomica-bold.woff2") format("woff2"),
+    url("../static/fonts/tomica-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Tomica Black";
+  src:
+    url("../static/fonts/tomica-black.woff2") format("woff2"),
+    url("../static/fonts/tomica-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+html {
+  font-variant-ligatures: none;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

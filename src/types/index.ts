@@ -1,0 +1,2 @@
+export { IUserType } from "./IUserType"
+

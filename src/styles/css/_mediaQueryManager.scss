@@ -1,0 +1,19 @@
+@import "./variables";
+
+$ipad-mini-land: 1024px;
+$ipad-pro-small-land: 1112px;
+$desktop-optimal: 1279px;
+
+/* stylelint-disable */
+@mixin respond ($displayBreakpoint) {
+  @if $displayBreakpoint == under-ipad-mini-land {
+    @media (max-width: $ipad-mini-land) { @content };
+  }
+  @if $displayBreakpoint == ipad-pro-small-land {
+    @media (max-width: $ipad-pro-small-land) { @content };
+  }
+  @if $displayBreakpoint == under-desktop-optimal {
+    @media (max-width: $desktop-optimal) { @content };
+  }
+}
+/* stylelint-enable */

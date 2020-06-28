@@ -1,0 +1,75 @@
+@import "./variables";
+
+h1 {
+  // Section header
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.6rem;
+  font-weight: $font-weight-bold;
+  // color: $sanction-color-black;
+}
+
+h2 {
+  // Heading
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.4rem;
+  font-weight: $font-weight-regular;
+  // color: $sanction-color-black;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: $font-weight-bold;
+  // color: $sanction-color-black;
+}
+
+h3 {
+  // Header text
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: $font-weight-light;
+  // color: $sanction-color-black;
+}
+
+// Titles
+
+h5 {
+  // Title
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6rem;
+  font-weight: $title-font-weight-regular;
+  line-height: 4rem;
+  // color: $sanction-color-black;
+}
+
+h6 {
+  // Subtitle
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: $font-weight-light;
+  // color: $sanction-color-black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: $font-weight-light;
+  // color: $sanction-color-black;
+}
+
+@mixin paragraph-light {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: $font-weight-light;
+  // color: $sanction-color-black;
+}
+
+@mixin paragraph-strong {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: $font-weight-regular;
+  // color: $sanction-color-black;
+}

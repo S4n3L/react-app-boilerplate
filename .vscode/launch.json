@@ -1,0 +1,40 @@
+// To run this properly, you need to start your node server in debug mode.
+// Here is an example coniguration:
+
+// "debug": "npm-run-all --parallel debug:*",
+// "debug:server": "node --inspect build/bundle.js",
+// "debug:build-server": "webpack --config ./config/webpack.server.js --watch",
+// "debug:build-client": "webpack --config ./config/webpack.client.js --watch"
+
+// yarn run debug
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "React: Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": true,
+      "runtimeArgs": [
+          "--profile-directory=debug-profile",
+        ]
+    },
+    {
+        "type": "node",
+        "request": "attach",
+        "name": "Node: Nodemon",
+        "restart": true,
+        "protocol": "inspector",
+        "port": 9229,
+    },
+  ],
+  "compounds": [
+    {
+        "name": "React SSR",
+        "configurations": ["Node: Nodemon", "React: Chrome"]
+    }
+]
+}

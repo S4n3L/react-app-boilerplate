@@ -1,0 +1,26 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit
+}
+
+body {
+  overflow-y: scroll;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;// 1rem = 10px => 10px / 16px (browser default) = 62.5%
+  // font-size: calc(90vw / 120); // default desktop - 1280
+  // font-size: 49%; // smallest landscape - 1024
+  // overflow: hidden;   // no classic scroll effect
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,57 @@
+// App variables
+
+$landing-page-menu-height: 6.8rem;
+
+/*
+
+Font types:
+
+Playfair Display
+
+Regular - 400
+Medium  - 500
+Semi Bold - 600
+Bold   - 700
+
+Roboto:
+
+Thin - 100
+Light - 300
+Regular - 400
+Medium - 500
+Bold - 700
+Black - 900
+
+*/
+
+$title-font-weight-regular: 400;
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Colors
+
+$color-white: #ffffff;
+$color-primary: #ff005e;
+$color-bg-light: #eaeaea;
+$color-bg-dark: #222222;
+
+$layer-zero: 0;
+$layer-one: 1;
+$layer-two: 2;
+$layer-three: 3;
+
+/* stylelint-disable */
+:export {
+  color-white: $color-white;
+
+
+  title-font-weight-regular: $title-font-weight-regular;
+  font-weight-thin: $font-weight-thin;
+  font-weight-light: $font-weight-light;
+  font-weight-regular: $font-weight-regular;
+  font-weight-bold: $font-weight-bold;
+}
+/* stylelint-enable */
