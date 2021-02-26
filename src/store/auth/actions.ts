@@ -6,7 +6,6 @@ import { createAction } from "@src/utils/actionHelper"
 import { IAuthState } from "./state"
 import { IUserType } from "@src/types"
 import { IAppState } from "@src/store/app/state"
-import { cookieHelper } from "@src/utils/cookieHelper"
 
 type FunctionType = (...args: any[]) => any
 type ActionCreatorsMapObject = { [actionCreator: string]: FunctionType }
@@ -67,7 +66,6 @@ export const authActionCreators = {
         .then((res: AxiosResponse) => {
           const responseData: IUserType = res.data
           dispatch(authActions.loginSuccess( responseData ))
-          cookieHelper.client.setCookie("/", "accessTokenBody", responseData.meta.accessTokenBody , parseInt(process.env.COOKIE_EXPIRY_IN_SECS, 10))
           resolve(getState().auth)
         })
         .catch((err) => {
@@ -75,76 +73,5 @@ export const authActionCreators = {
           reject(err)
         })
     })
-  },
-
-  loginWithToken: (token: string, axiosBaseConfig: AxiosRequestConfig) => (dispatch: ThunkDispatch<{}, {}, AnyAction>, getState: () => IAppState): Promise<IAuthState> => {
-    return new Promise((resolve, reject) => {
-      dispatch(authActions.loginPending())
-      const axiosConfig: AxiosRequestConfig = {
-        method: "get",
-        url: apiUrls.loginWithToken,
-        ...axiosBaseConfig
-      }
-      axiosConfig.headers = {
-        ...axiosConfig.headers,
-        Authorization: `Bearer ${token}`,
-      }
-      axios(axiosConfig)
-        .then((res: AxiosResponse) => {
-          const responseData: IUserType = res.data
-          responseData.meta = {
-            accessTokenBody: token
-          }
-          dispatch(authActions.loginSuccess( responseData ))
-          resolve(getState().auth)
-        })
-        .catch((err) => {
-          dispatch(authActions.loginFail())
-          reject(err)
-        })
-    })
-  },
-
-  logout: () => (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<IAuthState> => {
-    return new Promise((resolve, _reject) => {
-      dispatch(authActions.logOutPending())
-      dispatch(authActions.logOutSuccess())
-      resolve()
-    })
-  },
-
-  /* signUp: (userName: string, userEmail: string, companyName: string, password: string) => (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<IAuthState> => {
-    return new Promise((resolve, reject) => {
-      dispatch(authActions.signUpPending())
-      const axiosConfig: AxiosRequestConfig = {
-        method: "post",
-        url: apiUrls.signup,
-        data: {
-          name: userName,
-          email: userEmail,
-          company: companyName,
-          password: password
-        }
-      }
-      axios(axiosConfig)
-        .then(() => {
-          dispatch(authActions.signUpSuccess())
-          dispatch(authActionCreators.login(userEmail, password))
-            .then(() => {
-              resolve()
-            })
-            .catch((loginErr) => {
-              // TODO: Sentry
-              authActions.signUpFail()
-              reject(loginErr)
-            })
-        })
-        .catch((signupErr) => {
-          // TODO: Sentry
-          dispatch(authActions.signUpFail())
-          reject(signupErr)
-        })
-
-    })
-  }, */
+  }
 }

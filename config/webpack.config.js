@@ -15,13 +15,7 @@ console.log(chalk.yellow("[webpack - client] building bundle.js")) // eslint-dis
 checkRequiredVars(false)
 
 const config = {
-  // 1. We inform webpack that we will build a bundle for the browser - no need for node
-  // target: "node",
-
-  // 2. The root file (entry point) of our CLIENT app for webpack - usually this is also index.js
   entry: "./src/index.tsx",
-
-  // 3. We tell webpack where to put the output file that is generated
   output: {
     filename: "bundle.js",
     chunkFilename: "[name].bundle.js",
@@ -48,12 +42,10 @@ const config = {
     })
   ],
   resolve: {
-    // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", "jsx", ".json"],
     // This is what we use to manage module paths (instead of the node-modules package)
     plugins: [new TsconfigPathsPlugin()]
   },
-  // Here we tell webpack to run babel on every file webpack runs through
   module: {
     rules: [
       {
@@ -86,7 +78,6 @@ const config = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              //onlyLocals: true,
               localsConvention: "camelCase",
               modules: {
                 localIdentName: "[name]__[local]___[hash:base64:8]",
@@ -121,7 +112,6 @@ const config = {
             loader: "css-loader",
             options: {
               importLoaders: 2,
-              //onlyLocals: true,
               localsConvention: "camelCase",
               modules: {
                 localIdentName: "[name]__[local]___[hash:base64:8]",
@@ -153,7 +143,6 @@ const config = {
         test: /\.(png|jpg|gif)$/,
         use: [{
           loader: "file-loader",
-          //loader: 'url-loader',
           options: {
             name: "[name].[ext]",
             outputPath: "static/assets/image",
@@ -165,7 +154,6 @@ const config = {
         test: /\.(svg)$/,
         use: [{
           loader: "file-loader",
-          //loader: 'url-loader',
           options: {
             name: "[name].[ext]",
             outputPath: "static/assets/svg",
@@ -177,7 +165,6 @@ const config = {
         test: /\.(mp4|webm)$/,
         use: [{
           loader: "file-loader",
-          //loader: 'url-loader',
           options: {
             name: "[name].[ext]",
             outputPath: "static/assets/video",
@@ -189,7 +176,6 @@ const config = {
         test: /\.(ttf|eot|woff|woff2|otf)$/,
         use: [{
           loader: "file-loader",
-          //loader: 'url-loader',
           options: {
             name: "[name].[ext]",
             outputPath: "static/fonts/",
