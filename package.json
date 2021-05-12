@@ -54,7 +54,7 @@
     "immer": "^4.0.0",
     "jest": "^25.1.0",
     "jest-transform-css": "^2.0.0",
-    "postcss": "^7.0.18",
+    "postcss": "^8.2.10",
     "postcss-loader": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
