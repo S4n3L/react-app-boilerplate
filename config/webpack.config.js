@@ -23,6 +23,13 @@ const config = {
   },
   mode: process.env.NODE_ENV,
   devtool: "inline-source-map",
+  devServer: {
+    // static: path.join(__dirname, "build"),
+    // historyApiFallback: true,
+    port: process.env.APP_PORT,
+    // open: true,
+    // hot: true
+  },
   plugins: [
     new ExtractCssChunks({
       filename: "bundle.css",
