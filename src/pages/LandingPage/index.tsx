@@ -7,7 +7,10 @@ type LandingPageProps = RouteComponentProps
 
 const LandingPage: React.FunctionComponent<LandingPageProps> = () => {
   return (
-    <div className={style.landingPage}>Landing page4</div>
+    <div className={`${style.landingPage} ${style.flexible}`}>Landing page4
+      <div>a</div>
+      <div>b</div>
+    </div>
   )
 }
 

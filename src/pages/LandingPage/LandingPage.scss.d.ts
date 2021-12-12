@@ -4,6 +4,7 @@ declare namespace LandingPageScssNamespace {
   export interface ILandingPageScss {
     "color-white": string;
     colorWhite: string;
+    flexible: string;
     "font-weight-bold": string;
     "font-weight-light": string;
     "font-weight-regular": string;
