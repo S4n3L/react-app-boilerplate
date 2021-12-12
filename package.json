@@ -38,7 +38,7 @@
     "@babel/preset-typescript": "^7.9.0",
     "@teamsupercell/typings-for-css-modules-loader": "^2.0.0",
     "autoprefixer": "^10.4.0",
-    "axios": "0.16.2",
+    "axios": "0.21.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-css-modules-transform": "^1.6.2",
     "chalk": "^4.1.2",
