@@ -18,7 +18,7 @@ const routes: RouteConfig[] = [{
       exact: true,
     }
 /*     {
-      // component: "NotFoundPage",  // 404: Ha itt nincs megadva path, akkor minden nem találtra ezt adja (ez nem nest!)
+      // component: "NotFoundPage",  // 404: Default if no path defined
     }, */
   ],
 }]
