@@ -1,6 +1,5 @@
 import React from "react"
 import { Router } from "react-router-dom"
-import { HelmetProvider } from "react-helmet-async"
 import { createMemoryHistory } from "history"
 import { render } from "@testing-library/react"
 import { applyMiddleware, createStore } from "redux"
@@ -18,9 +17,7 @@ test("App and component rendering with router and store", () => {
   const { getByText } = render(
     <Provider store={store}>
       <Router history={history}>
-        <HelmetProvider>
-          <LandingPage />
-        </HelmetProvider>
+        <LandingPage />
       </Router>
     </Provider>
   )
