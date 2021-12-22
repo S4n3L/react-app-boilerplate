@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "no-plusplus": "off",
+    "no-console": 1,
+    "no-unused-vars": 0,
+    "no-mixed-operators": [
+      1,
+      {
+        "allowSamePrecedence": true
+      }
+    ]
+  }
+}

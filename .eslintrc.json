@@ -1,163 +1,30 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+    // "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    // "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        // "plugin:sonarjs/recommended",
-        "plugin:react/recommended",
-        // "airbnb",
-        "eslint:recommended",
-        // "plugin:import/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier",
-        "prettier/react",
-        "prettier/@typescript-eslint"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        // "project": "./tsconfig.json",
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        // "sonarjs",
-        "prettier",
-        "react-hooks"
-    ],
-    "rules": {
-        "arrow-parens": [2, "always"],
-        "arrow-spacing": ["error", { "before": true, "after": true }],
-        // "arrow-body-style": [2, "as-needed"],
-        "no-plusplus": "off",
-        "prefer-destructuring": "off",
-        "prettier/prettier": [
-            0,
-            {
-              "semi": true,
-              "singleQuote": true,
-              "trailingComma": "es5",
-              "printWidth": 100,
-              "tabWidth": 2,
-              "arrowParens": "avoid",
-              "jsxSingleQuote": false,
-              "jsxBracketSameLine": true
-            }
-        ],
-
-        "semi": ["error", "never"],
-        "eqeqeq": [1, "always"],
-        "quotes": [1, "double"],
-        "jsx-quotes": [2, "prefer-double"],
-        "no-undef": 0,
-        "no-console": 1,
-        "no-unused-vars": 0,
-        "no-mixed-operators": [1,
-            {
-            "allowSamePrecedence": true
-            }
-        ],
-        "eol-last": [2, "always"],
-        "no-confusing-arrow": 0,
-        "no-extra-parens": 0,
-/*         "no-extra-parens": [
-            "warn",
-            "all",
-            {
-            "conditionalAssign": false,
-            "nestedBinaryExpressions": false,
-            "ignoreJSX": "none",
-            "enforceForArrowConditionals": false
-            }
-        ],*/
-        "no-param-reassign": 0,
-        "prefer-template": 0,
-        "no-script-url": 0,
-        "prefer-promise-reject-errors": 0,
-        "no-unused-expressions": 0,
-        // "dot-notation": 0,
-
-        "import/prefer-default-export": 0,
-        // "import/no-useless-path-segments": 1,
-        "import/no-unresolved": 0,
-        "import/no-extraneous-dependencies": 0,
-        "import/no-named-as-default": 0,
-        "import/no-duplicates": 0,
-        "import/order": 0,
-        // "import/newline-after-import": 1,
-        "import/no-named-as-default-member": 0,
-        "import/namespace": 0,
-        "import/named": 0,
-
-        "jsx-a11y/anchor-is-valid": 0,
-        "jsx-a11y/click-events-have-key-events": 0,
-        "jsx-a11y/no-static-element-interactions": 0,
-        "jsx-a11y/label-has-for": 0,
-        "jsx-a11y/iframe-has-title": 0,
-        "jsx-a11y/control-has-associated-label": 0,
-
-        "react/jsx-wrap-multilines": [ 2,
-            {
-            "declaration": "parens-new-line",
-            "assignment": "parens-new-line",
-            "return": "parens-new-line",
-            "arrow": "ignore",
-            "condition": "ignore",
-            "logical": "ignore",
-            "prop": "ignore"
-            }
-        ],
-        "react/jsx-filename-extension": [1, {
-            "extensions": [".jsx", ".tsx"]
-        }],
-        "react/jsx-indent": 0,
-        "react/jsx-boolean-value": 0,
-        "react/jsx-closing-tag-location": 1,
-        // "react/jsx-closing-bracket-location": [2, { "selfClosing": "props-aligned", "nonEmpty": "after-props" }],
-        "react/prop-types": 0,
-        "react/button-has-type": 0,
-        // "react/jsx-tag-spacing": [2, {"beforeSelfClosing": "always"}],
-        "react/jsx-one-expression-per-line": 0,
-        "react/jsx-curly-spacing": 0,
-        "react/no-access-state-in-setstate": 0,
-        "react/no-unescaped-entities": 0,
-        "react/destructuring-assignment": 0,
-        "react/jsx-no-bind": 0,
-        "react/require-default-props": 0,
-        "react/display-name": 0,
-        "react/jsx-first-prop-new-line": 0,
-        "react/jsx-props-no-spreading": 0,
-        "react/static-property-placement": 0,
-        "react/state-in-constructor": 0,
-        "react-hooks/rules-of-hooks": "error",
-        // "react-hooks/exhaustive-deps": "warn",
-        "sort-imports": ["error", {
-            "ignoreCase": true,
-            "ignoreDeclarationSort": true,
-            "ignoreMemberSort": false,
-            "memberSyntaxSortOrder": ["all", "single", "multiple", "none"]
-        }],
-        "@typescript-eslint/indent": 0,
-        "@typescript-eslint/camelcase": 0,
-        "@typescript-eslint/explicit-function-return-type": 0,
-        "@typescript-eslint/no-non-null-assertion": 0,
-        "@typescript-eslint/member-delimiter-style": 0,
-        "@typescript-eslint/no-unused-vars": [1, {"args": "after-used", "argsIgnorePattern": "^_"}],
-        "@typescript-eslint/no-use-before-define": 0,
-        "@typescript-eslint/no-explicit-any": 0,
-        "@typescript-eslint/explicit-member-accessibility": 0,
-        "@typescript-eslint/no-angle-bracket-type-assertion": 0,
-        "@typescript-eslint/interface-name-prefix": 0
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
-
+  }
 }

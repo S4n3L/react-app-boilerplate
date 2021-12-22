@@ -1,8 +1,10 @@
 {
-  "name": "sanction-db",
+  "name": "x",
   "version": "1.0.0",
-  "description": "SanctionDB",
+  "description": "",
   "main": "index.js",
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.config.js",
     "clean": "rm -rf build public",
@@ -26,8 +28,7 @@
       "^.+\\.svg$": "jest-svg-transformer"
     }
   },
-  "author": "",
-  "license": "ISC",
+  "prettier": "./config/.prettierrc",
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
@@ -101,8 +102,6 @@
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-storybook": "^0.5.5",
     "identity-obj-proxy": "^3.0.0",
     "jest-svg-transformer": "^1.0.0",
     "mini-css-extract-plugin": "^2.4.5",

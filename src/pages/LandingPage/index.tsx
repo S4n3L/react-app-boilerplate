@@ -24,15 +24,10 @@ const LandingPage: React.FunctionComponent = () => {
         >
           Hello World
         </Button>
-        <Chip
-          className={style.chip}
-          label="primary"
-          color="primary"
-        />
+        <Chip className={style.chip} label="primary" color="primary" />
       </ThemeProvider>
     </div>
   )
 }
 
 export default LandingPage
-
