@@ -2,6 +2,7 @@
 // Please do not change this file!
 declare namespace LandingPageScssNamespace {
   export interface ILandingPageScss {
+    chip: string;
     "color-white": string;
     colorWhite: string;
     flexible: string;
