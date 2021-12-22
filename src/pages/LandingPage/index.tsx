@@ -7,16 +7,6 @@ import style from "./LandingPage.scss"
 import { Chip } from "@mui/material"
 import incubetaLight from "@src/styles/themes"
 
-/*
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#4caf50",
-    },
-  },
-})
-*/
-
 const LandingPage: React.FunctionComponent = () => {
   return (
     <div className={`${style.landingPage} ${style.flexible}`}>

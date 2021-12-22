@@ -1,0 +1,5 @@
+.storybook
+.vscode
+coverage
+node_modules
+public
