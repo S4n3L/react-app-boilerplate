@@ -9,18 +9,26 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    //"storybook-addon-material-ui5"
   ],
   "framework": "@storybook/react",
+  /*
+  // To generate storybook compatible properties for mui - need to revise
+  // https://stackoverflow.com/questions/63919936/missing-materialui-table-props-in-storybook
   typescript: {
     check: false,
     checkOptions: {},
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+      propFilter: (prop) => {
+        console.log("***", prop.parent)
+        return prop.parent
+          ? /@mui/.test(prop.parent.fileName) || !/node_modules/.test(prop.parent.fileName)
+          : true
+      },
     },
   },
+  */
   webpackFinal: async (config, { configType }) => {
     config.resolve.modules = [
       path.resolve(__dirname, ".."),
