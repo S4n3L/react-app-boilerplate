@@ -2,25 +2,25 @@
 // Please do not change this file!
 declare namespace AppScssNamespace {
   export interface IAppScss {
-    app: string;
-    "color-white": string;
-    colorWhite: string;
-    "font-weight-bold": string;
-    "font-weight-light": string;
-    "font-weight-regular": string;
-    "font-weight-thin": string;
-    fontWeightBold: string;
-    fontWeightLight: string;
-    fontWeightRegular: string;
-    fontWeightThin: string;
-    "title-font-weight-regular": string;
-    titleFontWeightRegular: string;
+    app: string
+    "color-white": string
+    colorWhite: string
+    "font-weight-bold": string
+    "font-weight-light": string
+    "font-weight-regular": string
+    "font-weight-thin": string
+    fontWeightBold: string
+    fontWeightLight: string
+    fontWeightRegular: string
+    fontWeightThin: string
+    "title-font-weight-regular": string
+    titleFontWeightRegular: string
   }
 }
 
 declare const AppScssModule: AppScssNamespace.IAppScss & {
   /** WARNING: Only available when `css-loader` is used without `style-loader` or `mini-css-extract-plugin` */
-  locals: AppScssNamespace.IAppScss;
-};
+  locals: AppScssNamespace.IAppScss
+}
 
-export = AppScssModule;
+export = AppScssModule
